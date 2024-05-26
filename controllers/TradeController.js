@@ -18,6 +18,7 @@ const uploadTrades = async (req, res) => {
 		fs.unlinkSync(filePath);
 		res.status(200).send("File uploaded and data stored successfully");
 	} catch (err) {
+        console.log(err);
 		res.status(500).send("Error storing data");
 	}
 };

@@ -1,9 +1,11 @@
 const express = require("express");
+const bodyParser = require('body-parser');
+
 const connectDB = require("./config/db");
 const tradeRoutes = require("./routes/tradeRoutes.js")
 
 const app = express();
-
+app.use(bodyParser.json());
 // Connect to MongoDB
 connectDB();
 
