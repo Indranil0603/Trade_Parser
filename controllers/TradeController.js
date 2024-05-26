@@ -4,7 +4,7 @@ const { parseCSV } = require("../utils/csvParser.js");
 
 //Function to upload trades
 const uploadTrades = async (req, res) => {
-    
+
     // Handle the case where req.file or req.file.path is undefined
     if (!req.file || !req.file.path) {
         res.status(400).send("No file uploaded or file path is missing");
