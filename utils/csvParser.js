@@ -9,6 +9,7 @@ const parseCSV = (filePath) => {
 			.on("data", (data) => {
 				const [base_coin, quote_coin] = data.Market.split("/");
 				results.push({
+                    user_id: data.User_ID,
 					utc_time: new Date(data.UTC_Time),
 					operation: data.Operation,
 					base_coin: base_coin.trim(),
